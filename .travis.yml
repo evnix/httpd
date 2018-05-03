@@ -8,9 +8,12 @@ matrix:
 
 before_install:
     - eval "${MATRIX_EVAL}"
-    - chmod +x ./buildit
+    - wget http://ftp.heanet.ie/mirrors/www.apache.org/dist/httpd/httpd-2.4.33.tar.gz && tar -zxvf httpd-2.4.33.tar.gz
+    - cd httpd-2.4.33/srclib && wget http://ftp.heanet.ie/mirrors/www.apache.org/dist/apr/apr-1.6.3.tar.gz && tar -zxvf apr-1.6.3.tar.gz
+    - cd httpd-2.4.33/srclib && wget http://ftp.heanet.ie/mirrors/www.apache.org/dist/apr/apr-util-1.6.1.tar.gz && tar -zxvf apr-util-1.6.1.tar.gz
+    - cd httpd-2.4.33/srclib && mkdir outbin && ./configure --prefix=./outbin && make
   
     
 language: c
-script: ./buildit
+script: echo 1
 
