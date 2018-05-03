@@ -8,6 +8,8 @@ matrix:
 
 before_install:
     - eval "${MATRIX_EVAL}"
+    - chmod +x ./buildit
+  
     
 language: c
 script: ./buildit
