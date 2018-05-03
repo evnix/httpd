@@ -11,7 +11,7 @@ before_install:
     - wget http://ftp.heanet.ie/mirrors/www.apache.org/dist/httpd/httpd-2.4.33.tar.gz && tar -zxvf httpd-2.4.33.tar.gz
     - cd httpd-2.4.33/srclib && wget http://ftp.heanet.ie/mirrors/www.apache.org/dist/apr/apr-1.6.3.tar.gz && tar -zxvf apr-1.6.3.tar.gz
     - wget http://ftp.heanet.ie/mirrors/www.apache.org/dist/apr/apr-util-1.6.1.tar.gz && tar -zxvf apr-util-1.6.1.tar.gz
-    - cd ../ && mkdir outbin && ./configure --prefix=./outbin && make
+    - cd ../ && mkdir /tmp/outbin && ./configure --prefix=/tmp/outbin && make
   
     
 language: c
