@@ -1,0 +1,4 @@
+mkdir outbin
+./buildconf
+./configure  --prefix=./outbin
+make
